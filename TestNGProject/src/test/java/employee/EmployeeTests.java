@@ -19,7 +19,7 @@ public class EmployeeTests extends BaseTest {
 
         LoginPage loginPage = new LoginPage(webDriverThread.get());
         EmployeePage employeePage = loginPage.loginAs("admin","admin123");
-        employeePage.addEmployee("Juan","Juan@gmail.com","MTZ","522255",
+        employeePage.addEmployee(name,"Juan@gmail.com","MTZ","522255",
                 "Montevideo", "Uruguay", "11523");
         Assert.assertTrue(employeePage.isSuccessAlertVisible());
     }

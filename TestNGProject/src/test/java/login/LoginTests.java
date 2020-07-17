@@ -18,9 +18,9 @@ public class LoginTests extends BaseTest {
         System.out.println("testSuccessfulLogin Thread-id: " + Thread.currentThread().getId());
 
         LoginPage loginPage = new LoginPage(webDriverThread.get());
-        EmployeePage employeePage = loginPage.loginAs("admin","admin123");
+        EmployeePage employeePage = loginPage.loginAs(user,pass);
         Assert.assertTrue(employeePage.isEmployeePageDisplayed());
-        Assert.assertEquals(employeePage.getUserNameText(), "admin");
+        Assert.assertEquals(employeePage.getUserNameText(), user);
     }
 
     @DataProvider(name = "data-provider", parallel = true)
