@@ -1,4 +1,4 @@
-<suite name="Suite" thread-count="3" parallel="methods">
+<suite name="Suite" thread-count="3" data-provider-thread-count="2" parallel="methods">
     <test name="All test chrome">
         <parameter name="browser" value="chrome"/>
         <parameter name="seleniumGridUrl" value=""/>
