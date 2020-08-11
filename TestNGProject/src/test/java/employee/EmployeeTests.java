@@ -6,6 +6,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.EmployeePage;
 import pages.LoginPage;
+import webdriver.factory.threadsafe.CurrentWebDriver;
 
 public class EmployeeTests extends BaseTest {
 
@@ -17,7 +18,7 @@ public class EmployeeTests extends BaseTest {
     public void testAddEmployee(String name){
         System.out.println("testAddEmployee Thread-id: " + Thread.currentThread().getId());
 
-        LoginPage loginPage = new LoginPage(webDriverThread.get());
+        LoginPage loginPage = new LoginPage(CurrentWebDriver.getInstance().getWebDriver());
         EmployeePage employeePage = loginPage.loginAs("admin","admin123");
         employeePage.addEmployee(name,"Juan@gmail.com","MTZ","522255",
                 "Montevideo", "Uruguay", "11523");
