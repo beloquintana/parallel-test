@@ -17,7 +17,6 @@ public class EmployeeTests extends BaseTest {
     @ValueSource(strings = { "Juan", "Pedro" })
     public void testAddEmployee(String name){
         System.out.println("testAddEmployee Thread-id: " + Thread.currentThread().getId());
-        System.out.println("testAddEmployee Thread-id: " + testVar);
 
         LoginPage loginPage = new LoginPage(webDriver);
         EmployeePage employeePage = loginPage.loginAs("admin","admin123");

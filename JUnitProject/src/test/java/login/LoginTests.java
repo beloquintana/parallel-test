@@ -17,7 +17,6 @@ public class LoginTests extends BaseTest {
     @CsvSource({ "admin,admin123", "admin,admin123" })
     public void testSuccessfulLogin(String user, String pass){
         System.out.println("testSuccessfulLogin Thread-id: " + Thread.currentThread().getId());
-        System.out.println("testSuccessfulLogin Thread-id: " + testVar);
 
         LoginPage loginPage = new LoginPage(webDriver);
         EmployeePage employeePage = loginPage.loginAs(user,pass);

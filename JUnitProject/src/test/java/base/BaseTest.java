@@ -11,8 +11,6 @@ public abstract class BaseTest {
     protected WebDriver webDriver;
     private String url = "https://testfaceclub.com/login-employee-v2/";
 
-    protected static String testVar;
-
     public BaseTest(){
         System.out.println("BaseTest Thread-id: " + Thread.currentThread().getId());
     }
@@ -20,7 +18,6 @@ public abstract class BaseTest {
     @BeforeAll
     public static void setUpBaseTest(){
         System.out.println("setUpBaseTest Thread-id: " + Thread.currentThread().getId());
-        testVar = "setUpSuite";
     }
 
     @BeforeEach
