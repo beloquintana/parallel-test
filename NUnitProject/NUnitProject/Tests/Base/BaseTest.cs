@@ -18,7 +18,6 @@ namespace NUnitProject.Tests.Base
         public BaseTest()
         {
             Logger.Instance.Info("BaseTest Thread-id: " + Thread.CurrentThread.ManagedThreadId);
-            //Debug.WriteLine("BaseTest Thread-id: " + Thread.CurrentThread.ManagedThreadId);
         }
 
         [SetUp]
